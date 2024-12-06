@@ -3,19 +3,26 @@ const DB = require("./Controllers/DB");
 
 const app = express();
 
-app.get("/categories", (req, res) => {
-  DB.pool.query("SELECT * FROM category").then((result) => {
-    return res
-      .status(200)
-      .json({
-        status: "success",
-        data: result,
-      })
-      .catch((error) => {
-        return res.status(400).json({
-          error: error.message,
-        });
-      });
+app.get("/categories", async (req, res) => {
+  try {
+    const categories = await DB.pool.query("SELECT * FROM category");
+
+    return res.status(200).json({
+      status: "success",
+      data: categories.rows,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: "Internal Server Error",
+    });
+  }
+});
+
+app.get("/products", async (req, res) => {
+  const products = await DB.pool.query("SELECT * FROM product");
+  res.status(200).json({
+    status: "success",
+    data: products.rows,
   });
 });
 
