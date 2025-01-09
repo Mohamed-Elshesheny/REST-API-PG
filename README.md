@@ -14,7 +14,7 @@ A simple **RESTful API** built with **Node.js**, **Express.js**, and **PostgreSQ
 
 ---
 
-## 🛠️ Technologies Used .
+## 🛠️ Technologies Used 
 
 - **Node.js**: JavaScript runtime environment.
 - **Express.js**: Minimal web framework for Node.js.
