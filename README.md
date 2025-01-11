@@ -17,7 +17,7 @@ A simple **RESTful API** built with **Node.js**, **Express.js**, and **PostgreSQ
 ## 🛠️ Technologies Used 
 
 - **Node.js**: JavaScript runtime environment.
-- **Express.js**: Minimal web framework for Node.js
+- **Express.js**: Minimal web framework for Node.js.
 - **PostgreSQL**: Relational database for data storage.
 - **pg**: PostgreSQL client for Node.js.
 - **dotenv**: Environment variable management.
